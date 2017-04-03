@@ -5,10 +5,10 @@
 # divisible by itself and the number 1.
 def is_prime?(number)
   factors = []
-  (2..(Math.sqrt(number))).each do |divisible_by|
-    if number % divisible_by == 0
-      factors << divisible_by
-      factors << (number / divisible_by)
+  (2..(Math.sqrt(number))).each do |multiple|
+    if number % multiple == 0
+      factors << multiple
+      factors << (number / multiple)
     end
   end
   factors == [] ? true : false
